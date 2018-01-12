@@ -20,7 +20,7 @@ marlin -u YourPayoutAddress.WorkerName -I 28
 
 * By default, the miner connects to one of SiaMining.com's Stratum servers. Use option `-H` to connect to a specific server.
 * By default, all OpenCL GPUs are used. To use a specific subset of OpenCL devices, use option `-d` with a comma-separated list of device IDs. The full list of IDs is printed every time the miner is started. Note that Nvidia GPUs should be listed twice, once as CUDA and once as OpenCL devices; the OpenCL interface is disabled by default for these GPUs, as CUDA usually gives better results.
-* The default intensity is 24. You can use option `-I` to adjust it. You can also specify a different intensity for each device by passing a comma-separated list.
+* The default intensity is 24. You can use option `-I` to adjust it. You can also specify a different intensity for each device by passing a comma-separated list. Your chosen intensity should depend on the power of your GPU. To ensure your miner continues running at any intensity, open the malvin .bat file in notepad and add a loop to ensure a restart when mining fails.
 * You can use option `-K` to use a kernel other than the default one; like with intensity, you can specify a different kernel for each device by passing a comma-separated list. Run a benchmark with option `--benchmark` to see all available kernels for a given device.
 
 To see all supported options:
